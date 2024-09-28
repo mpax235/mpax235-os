@@ -1,0 +1,16 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    padding: 5px;
+}
+
+#header-cyan {
+    color: #00ffff;
+    font-size: 22px;
+}
+
+#logo {
+    color: #00ffff;
+    font-size: 22px;
+    text-align: right;
+    float: right; /* force the logo to the right */
+}
