@@ -1,7 +1,3 @@
-#start {
-    margin: 3px;
-}
-
-#settings {
+#start, #settings, #developers, #store, #browser, #fileexplorer {
     margin: 3px;
 }
