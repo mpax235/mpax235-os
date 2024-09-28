@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Hello World</title>
+        <link rel="stylesheet" href="../css/bios.css"> <!--includes the UEFI stylesheet-->
+        <link rel="stylesheet" href="../css/efi_app.css"> <!--includes the EFI app stylesheet-->
+    </head>
+    <body>
+        <div class="container"> <!--for the EFI app to work correctly-->
+            <a>UEFI Hello World!</a> <!--prints out the "UEFI Hello World!" text-->
+        </div>
+        <script>
+            setTimeout(function() { // waits for 50 milliseconds before redirecting back to the Boot Menu
+                window.location.href = "../../uefi_firmware/pages/boot_menu/boot_menu.html"; // redirect to Boot Menu
+            }, 50); // wait 50 milliseconds
+        </script>
+    </body>
+</html>

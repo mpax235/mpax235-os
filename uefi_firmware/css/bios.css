@@ -8,7 +8,7 @@ body {
 
 @font-face {
     font-family: 'BIOS';
-    src: url('../fonts/efiapp/BIOS.ttf')
+    src: url('../sources/fonts/efiapp/BIOS.ttf')
 }
 
 a {

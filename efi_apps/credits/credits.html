@@ -16,6 +16,29 @@
             <a id="cyan">Zeh Fernando - For the DOS VGA 437 font used in this UEFI firmware</a>
             <br>
             <a id="cyan">Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral and Jacques Le Bailly - For the Montserrat font</a>
+            <br>
+            <br><br>
+            <a id="yellow">Press ESC to exit</a>
         </div>
+        <script>
+            var addEvent = document.addEventListener ? function(target,type,action){
+                if(target){
+                    target.addEventListener(type,action,false);
+                }
+
+            } : function(target,type,action){
+                if(target){
+                    target.attachEvent('on' + type,action,false);
+                }
+            }
+    
+            addEvent(document,'keydown',function(e){
+                e = e || window.event;
+                var key = e.which || e.keyCode;
+                if(key===27){
+                    window.location.replace("../../uefi_firmware/pages/boot_menu/boot_menu.html");
+                }
+            });
+        </script>
     </body>
 </html>

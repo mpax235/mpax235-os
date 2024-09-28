@@ -1,0 +1,13 @@
+#logo2 {
+    height: 150px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.logo1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>mpax235 OS</title>
+        <link rel="stylesheet" href="../css/bios.css"> <!--includes the UEFI stylesheet-->
+        <link rel="stylesheet" href="../css/efi_app.css"> <!--includes the EFI app stylesheet-->
+        <link rel="stylesheet" href="bootx64.css"> <!--includes the BOOTX64 EFI APP's stylesheet-->
+    </head>
+    <body>
+        <div class="container"> <!--for the EFI app to work correctly-->
+            <div class="logo1">
+                <img id="logo2" src="../../uefi_firmware/sources/logos/uefi_logo.png">
+            </div>
+        </div>
+        <script>
+            function fadeInLogo() {
+                const logo = document.getElementById("logo2");
+                logo.style.opacity = 1;
+
+                setTimeout(fadeOutLogo, 2000);
+            }
+
+            function fadeOutLogo() {
+                const logo = document.getElementById("logo2");
+                logo.style.opacity = 0;
+            }
+
+            setTimeout(function() {
+                window.location.href = "../../operating_system/programs/welcome_to_mpax235_os/index.html";
+            }, 4000);
+
+            window.onload = function() {
+                fadeInLogo();
+            };
+        </script>
+    </body>
+</html>
