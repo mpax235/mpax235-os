@@ -56,3 +56,7 @@ body {
 .button-center {
     text-align: center;
 }
+
+a:hover button {
+    cursor: pointer;
+}
