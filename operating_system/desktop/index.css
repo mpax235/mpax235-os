@@ -1,5 +1,5 @@
 body {
-    background-image: url('images/wallpaper0.png');
+    background-image: url('images/wallpaper0.png'); /*for the wallpaper*/
     background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,6 +8,7 @@ body {
     padding: 0;
     min-height: 100vh;
     min-width: 100vw;
+    overflow: hidden;
 }
 
 .taskbar iframe {
@@ -31,4 +32,21 @@ body {
     width: 99%;
     position: relative;
     overflow: hidden;
+}
+
+a {
+    color: #00ffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    margin: 5px;
+}
+
+#notfinished {
+    color: #ff0000;
+}
+
+.notfinished {
+    text-align: center;
 }
