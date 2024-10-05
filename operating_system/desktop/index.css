@@ -17,7 +17,6 @@ body {
 }
 
 .taskbar {
-    text-align: center;
     overflow: hidden;
     margin: 0;
     position: fixed;
@@ -28,9 +27,8 @@ body {
     width: 100%;
 }
 
-#taskbar {
+.taskbar {
     width: 99%;
-    position: relative;
     overflow: hidden;
 }
 

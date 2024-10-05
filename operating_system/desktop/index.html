@@ -3,11 +3,21 @@
     <head>
         <title>mpax235 OS</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="taskbar_apps.css">
+        <link rel="stylesheet" href="taskbar.css">
+        <link rel="stylesheet" href="appWindow.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div id="appWindow">
+            <div class="topBar" id="topbar">
+                <span class="OSTitle" id="appTitle">Application</span>
+                <span class="close-btn" onclick="closeWindow()">X</span>
+            </div>
+            <iframe id="appOSWindowPage" src=""></iframe>
+        </div>
         <div id="context-menu">
             <ul>
                 <li onclick="menuAction('Personalize')">Personalize</li>
@@ -20,8 +30,16 @@
             </div>
         </div>
         <div class="taskbar">
-            <iframe id="taskbar" src="../taskbar/index.html"></iframe>
+            <div class="taskbar1">
+                <img id="start" src="../taskbar/icons/start.png">
+                <img id="settings" src="../taskbar/icons/settings.png">
+                <a onclick="developers()"><img id="developers" src="../taskbar/icons/developers.png"></a>
+                <a onclick="mpax235store()"><img id="store" src="../taskbar/icons/store.png"></a>
+                <img id="browser" src="../taskbar/icons/browser.png">
+                <img id="fileexplorer" src="../taskbar/icons/fileexplorer.png">
+            </div>
         </div>
         <script src="../kernel/js/rightclick.js"></script>
+        <script src="apps.js"></script>
     </body>
 </html>

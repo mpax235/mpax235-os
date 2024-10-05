@@ -1,0 +1,19 @@
+.taskbar1 {
+    background-color: #004545c8;
+    border-radius: 6px;
+    height: 45px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    height: 37px;
+}
+
+.taskbar {
+    z-index: 5000;
+}
+

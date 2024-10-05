@@ -1,0 +1,54 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* set font family to Montserrat */
+    margin: 0;
+    padding: 0;
+    background-color: #001717ff;
+    margin: 8px;
+}
+
+h1, h2 {
+    font-weight: 300;
+}
+
+.active {
+    font-weight: bold;
+}
+
+a #button {
+    padding: 12px;
+    width: 128px;
+    background-color: #004040;
+    color: #00ffff;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+a #button:hover {
+    transform: scale(1.05);
+    background-color: #00ffff;
+    color: #000000;
+    cursor: pointer;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a #appsbutton {
+    padding: 12px;
+    width: 128px;
+    background-color: #004040;
+    color: #00ffff;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    float: right;
+}
+
+a #appsbutton:hover {
+    transform: scale(1.05);
+    background-color: #00ffff;
+    color: #000000;
+    cursor: pointer;
+}

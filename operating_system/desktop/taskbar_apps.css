@@ -1,0 +1,7 @@
+#start, #settings, #developers, #store, #browser, #fileexplorer {
+    margin: 3px;
+}
+
+a img:hover {
+    cursor: pointer;
+}
