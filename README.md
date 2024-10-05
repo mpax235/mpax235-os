@@ -9,3 +9,5 @@ Made in **HTML**, **CSS** and **JavaScript**.
 Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral and Jacques Le Bailly for the **Montserrat** font.
 
 Zeh Fernando for the **DOS VGA 437** font.
+
+edk2 Project for the Color definitions of EFI colors used in the UEFI firmware.
