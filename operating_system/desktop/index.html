@@ -8,6 +8,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div id="context-menu">
+            <ul>
+                <li onclick="menuAction('Personalize')">Personalize</li>
+                <li onclick="menuAction('DisplaySettings')">Display Settings</li>
+            </ul>
+        </div>
         <div class="container">
             <div class="notfinished">
                 <a id="notfinished">This OS is not finished yet, stuff may not work yet currently.</a>
@@ -16,5 +22,6 @@
         <div class="taskbar">
             <iframe id="taskbar" src="../taskbar/index.html"></iframe>
         </div>
+        <script src="../kernel/js/rightclick.js"></script>
     </body>
 </html>
