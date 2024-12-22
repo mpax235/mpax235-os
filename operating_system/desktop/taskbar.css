@@ -26,7 +26,8 @@
 */
 
 .taskbar1 {
-    background-color: #004545c8;
+    background-color: #00454562;
+    backdrop-filter: blur(7px);
     border-radius: 6px;
     height: 45px;
     align-items: center;
