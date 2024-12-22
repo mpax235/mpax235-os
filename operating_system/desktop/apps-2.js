@@ -1,10 +1,35 @@
-// JavaScript to handle multiple OS windows
-let windowCount = 0; // Keeps track of open windows
+/*
+    BSD 2-Clause License
+
+    Copyright (c) 2024, mpax235
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met:
+
+    1. Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+    FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+    CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+let windowCount = 0;
 
 function createWindow(title, src) {
     windowCount++;
 
-    // Create the main window div
     const appWindow = document.createElement("div");
     appWindow.id = `appWindow-${windowCount}`;
     appWindow.className = "appWindow";
@@ -19,7 +44,6 @@ function createWindow(title, src) {
     appWindow.style.resize = "bot h";
     appWindow.style.overflow = "hidden";
 
-    // Create the top bar
     const topBar = document.createElement("div");
     topBar.className = "topBar";
     topBar.style.background = "#00454562";
@@ -32,12 +56,10 @@ function createWindow(title, src) {
     topBar.style.fontSize = "12px";
     topBar.style.justifyContent = "space-between";
 
-    // Title
     const appTitle = document.createElement("span");
     appTitle.className = "OSTitle";
     appTitle.textContent = title;
 
-    // Close button
     const closeBtn = document.createElement("span");
     closeBtn.className = "close-btn";
     closeBtn.textContent = "X";
@@ -48,11 +70,9 @@ function createWindow(title, src) {
         windowCount--;
     };
 
-    // Append title and close button to top bar
     topBar.appendChild(appTitle);
     topBar.appendChild(closeBtn);
 
-    // Create iframe
     const iframe = document.createElement("iframe");
     iframe.id = `appOSWindowPage-${windowCount}`;
     iframe.src = src;
@@ -61,14 +81,11 @@ function createWindow(title, src) {
     iframe.style.border = "none";
     iframe.style.backgroundColor = "black";
 
-    // Append top bar and iframe to main window
     appWindow.appendChild(topBar);
     appWindow.appendChild(iframe);
 
-    // Append the app window to the body
     document.body.appendChild(appWindow);
 
-    // Make the window draggable
     makeDraggable(appWindow, topBar);
 }
 
@@ -97,7 +114,6 @@ function makeDraggable(element, handle) {
     };
 }
 
-// Functions to open specific windows
 function developers() {
     createWindow("Developers", "../programs/developers/index.html");
 }
