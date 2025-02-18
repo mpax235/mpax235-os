@@ -28,9 +28,11 @@
 .taskbar1 {
     background-color: #00454562;
     backdrop-filter: blur(7px);
-    border-radius: 6px;
+    border-radius: 12px;
     height: 45px;
     align-items: center;
+    display: flex;
+    gap: 2px;
 }
 
 body {
@@ -46,3 +48,26 @@ img {
     z-index: 5000;
 }
 
+#bar {
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0.18);
+    backdrop-filter: blur(7px);
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.taskbar1 a {
+    margin: 0;
+    padding: 0;
+    height: 43px;
+}
+
+.appicon {
+    transition: 0.2s ease-in-out;
+}
+
+.appicon:hover {
+    transform: scale(1.05);
+    filter: brightness(150%);
+}

@@ -64,15 +64,22 @@ a {
 }
 
 button {
-    background-color: #00ffff;
-    border: none;
-    padding: 10px;
-    width: 350px;
-    border-radius: 12px;
-    font-family: 'Montserrat', sans-serif;
+    background-color: #1616165e;
+    border: 1px solid rgba(0, 255, 255, 0.18);
+    padding: 10px 15px;
+    color: #00ffff;
+    font-family: 'Montserrat', 'Arial';
     text-decoration: none;
+    text-align: center;
+    border-radius: 12px;
+    transition: 0.2s ease-in-out;
+    backdrop-filter: blur(7px);
+}
+
+button:hover {
+    background-color: #00ffff5e;
+    transform: scale(1.05);
     color: #000000;
-    margin: 7px;
 }
 
 a:hover button {
@@ -106,4 +113,56 @@ a {
 
 #red {
     color: #FF0000;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    background-color: #000000;
+    backdrop-filter: blur(7px);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0063635e;
+    border: 1px solid rgba(0, 255, 255, 0.18);
+    border-radius: 12px;
+    backdrop-filter: blur(7px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0083835e;
+}
+
+::-webkit-scrollbar-track {
+    background: #0000005e;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #0063635e;
+    border: 1px solid rgba(0, 255, 255, 0.18);
+}
+
+::-webkit-scrollbar-button:hover {
+    background-color: #0083835e;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url('https://mpax235.github.io/assets/images/scrollbar/scrollbar_up_arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url('https://mpax235.github.io/assets/images/scrollbar/scrollbar_down_arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:decrement,
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+    display: none;
+}
+
+.back {
+    margin: 7px;
 }

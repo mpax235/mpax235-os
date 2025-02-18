@@ -36,11 +36,13 @@
         <link rel="stylesheet" href="efi_apps/css/efi_app.css">
     </head>
     <body>
-        <div class="container">
-            <a>POST Error: 0x01</a>
-            <br>
-            <a>Reason: JavaScript is not enabled, please enable it.</a>
-        </div>
+        <noscript>
+            <div class="container">
+                <a>POST Error: 0x01</a>
+                <br>
+                <a>Reason: JavaScript is not enabled, please enable it.</a>
+            </div>
+        </noscript>
         <script src="uefi_firmware/js/timeout.js"></script>
     </body>
 </html>

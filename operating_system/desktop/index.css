@@ -25,17 +25,22 @@
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+html, body {
+    height: 100%;
+}
 body {
     background-image: url('images/wallpaper0.png'); /*for the wallpaper*/
     background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     min-width: 100vw;
     overflow: hidden;
+    user-select: none;
 }
 
 .taskbar iframe {
@@ -44,24 +49,31 @@ body {
 }
 
 .taskbar {
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
     margin: 0;
-    position: fixed;
-    bottom: 0;
-    left: 60%;
-    transform: translateX(-60%);
-    height: 62px;
+    height: 45px;
+    margin-bottom: 10px;
     width: 100%;
 }
 
+.taskbar1 {
+    width: calc(100% - 15px);
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
 .taskbar {
-    width: 99%;
     overflow: hidden;
 }
 
 a {
     color: #00ffff;
     font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    margin-top: 5px;
 }
 
 .container {
@@ -81,8 +93,9 @@ a {
 #context-menu {
     position: absolute;
     display: none;
-    background-color: black;
-    border: 1px solid #00ffff;
+    background-color: #1616165e;
+    border: 1px solid rgba(0, 255, 255, 0.18);
+    backdrop-filter: blur(7px);
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 6000;
     width: 150px;
@@ -94,19 +107,72 @@ a {
     list-style: none;
     margin: 0;
     padding: 0;
+    font-size: 14px;
 }
 
 #context-menu ul li {
     padding: 8px;
     cursor: pointer;
-    border-bottom: 1px solid #00ffff;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.18);
+    transition: 0.2s ease-in-out;
 }
 
 #context-menu ul li:hover {
-    background-color: #00ffff;
+    background-color: #00ffff5e;
     color: #000000;
 }
 
 #context-menu ul li:last-child {
     border-bottom: none;
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+}
+
+.resizers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+
+.resizer {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #00ffff;
+    z-index: 100;
+}
+
+.resizer.top-left {
+    top: -5px;
+    left: -5px;
+    cursor: nwse-resize;
+}
+
+.resizer.top-right {
+    top: -5px;
+    right: -5px;
+    cursor: nesw-resize;
+}
+
+.resizer.bottom-left {
+    bottom: -5px;
+    left: -5px;
+    cursor: nesw-resize;
+}
+
+.resizer.bottom-right {
+    bottom: -5px;
+    right: -5px;
+    cursor: nwse-resize;
 }

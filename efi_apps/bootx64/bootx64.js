@@ -25,62 +25,22 @@
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-body {
-    font-family: 'Montserrat', sans-serif; /* set font family to Montserrat */
-    margin: 0;
-    padding: 0;
-    background-color: #001717ff;
-    margin: 8px;
+function fadeInLogo() {
+    const logo = document.getElementById("logo2");
+    logo.style.opacity = 1;
+
+    setTimeout(fadeOutLogo, 2000);
 }
 
-h1, h2 {
-    font-weight: 300;
+function fadeOutLogo() {
+    const logo = document.getElementById("logo2");
+    logo.style.opacity = 0;
 }
 
-.active {
-    background-color: #00ffff5e !important;
-    color: #000000 !important;
-}
+setTimeout(function() {
+    window.location.href = "../../operating_system/programs/welcome_to_mpax235_os/index.html";
+}, 4000);
 
-a #button {
-    background-color: #1616165e;
-    border: 1px solid rgba(0, 255, 255, 0.18);
-    padding: 10px 15px;
-    color: #00ffff;
-    font-family: 'Montserrat', 'Arial';
-    text-decoration: none;
-    text-align: center;
-    border-radius: 12px;
-    transition: 0.2s ease-in-out;
-    backdrop-filter: blur(7px);
-}
-
-a #button:hover {
-    background-color: #00ffff5e;
-    transform: scale(1.05);
-    color: #000000;
-}
-
-button {
-    font-family: 'Montserrat', sans-serif;
-}
-
-a #appsbutton {
-    background-color: #1616165e;
-    border: 1px solid rgba(0, 255, 255, 0.18);
-    padding: 10px 15px;
-    color: #00ffff;
-    font-family: 'Montserrat', 'Arial';
-    text-decoration: none;
-    text-align: center;
-    border-radius: 12px;
-    transition: 0.2s ease-in-out;
-    backdrop-filter: blur(7px);
-    float: right;
-}
-
-a #appsbutton:hover {
-    background-color: #00ffff5e;
-    transform: scale(1.05);
-    color: #000000;
-}
+window.onload = function() {
+    fadeInLogo();
+};
