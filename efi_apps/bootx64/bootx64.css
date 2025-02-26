@@ -25,16 +25,70 @@
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-#logo2 {
-    height: 150px;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+    user-select: none;
+    overflow: hidden;
 }
 
-.logo1 {
+#logo2 {
+    height: 150px;
+    color: #00ffff;
+    font-family: 'Montserrat';
+    font-size: 200px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+span {
+    color: #00ffff;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+#logo1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    flex-direction: column;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+    transform: scale(0);
+}
 
+.container {
+    margin: 0;
+}
+
+#loadingbarcontainer {
+    background-color: #1616165e;
+    border: 1px solid rgba(0, 255, 255, 0.18);
+    border-radius: 12px;
+    margin-top: 20px;
+    width: 300px;
+    height: 30px;
+    display: flex;
+}
+
+#loadingbar {
+    background-color: #00ffff5e;
+    margin: 5px;
+    width: 0px;
+    height: 20px;
+    border-radius: 8px;
+}
+
+@keyframes loadingbar {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 300px;
+    }
 }

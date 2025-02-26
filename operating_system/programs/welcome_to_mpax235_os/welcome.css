@@ -33,6 +33,10 @@ body {
     background-color: black;
     min-height: 100vh;
     min-width: 50vh;
+    opacity: 1;
+    overflow: hidden;
+    transition: 0.5s opacity ease-in-out;
+    user-select: none;
 }
 
 h1 {
@@ -118,4 +122,63 @@ a:hover button {
 
 .ok {
     text-align: center;
+}
+
+#mpaxos8 {
+    animation: slidein1 2s ease-in-out;
+    transition: 0.5s ease-in-out;
+    font-weight: normal;
+}
+
+#welcome {
+    animation: slidein2 2s ease-in-out;
+    font-weight: 300;
+}
+
+#blackscreen {
+    background-color: black;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes slidein1 {
+    0% {
+        transform: translateX(-200vh);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slidein2 {
+    0% {
+        transform: translateX(200vh);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+    }
+
+    50% {
+        text-shadow: none;
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+    }
+}
+
+#ready {
+    transition: 0.5s opacity ease-in-out;
+    opacity: 0;
 }

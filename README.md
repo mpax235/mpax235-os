@@ -1,5 +1,5 @@
 # mpax235 OS
-This is a Operating System made by [mpax235](https://github.com/mpax235).
+This is an Operating System made by [mpax235](https://github.com/mpax235).
 
 Made in **HTML**, **CSS**, and **JavaScript**.
 

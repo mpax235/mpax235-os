@@ -36,8 +36,8 @@ function createWindow(title, src, appIconImage) {
     appWindow.style.position = "absolute";
     appWindow.style.top = `${100 + windowCount * 30}px`;
     appWindow.style.left = `${100 + windowCount * 30}px`;
-    appWindow.style.width = "600px";
-    appWindow.style.height = "420px";
+    appWindow.style.width = "640px";
+    appWindow.style.height = "480px";
     appWindow.style.borderRadius = "12px";
     appWindow.style.border = "1px solid rgba(0, 255, 255, 0.18)";
     appWindow.style.zIndex = 500 + windowCount;
@@ -79,8 +79,14 @@ function createWindow(title, src, appIconImage) {
     closeBtn.style.marginRight = "5px";
     closeBtn.style.zIndex = "2000";
     closeBtn.onclick = () => {
-        document.body.removeChild(appWindow);
-        windowCount--;
+        appWindow.style.animation = "none";
+        appWindow.style.transition = "opacity 0.5s, transform 0.5s";
+        appWindow.style.opacity = "0";
+        appWindow.style.transform = "scale(0)";
+        setTimeout(() => {
+            document.body.removeChild(appWindow);
+            windowCount--;
+        }, 500);
     };
 
     topBar.appendChild(appIcon);
@@ -110,6 +116,10 @@ function createWindow(title, src, appIconImage) {
     appWindow.appendChild(iframe);
 
     document.body.appendChild(appWindow);
+
+    requestAnimationFrame(() => {
+        appWindow.style.animation = "windowopen 0.5s ease-in-out";
+    });
 
     makeDraggable(appWindow, topBar, cover);
     //makeResizable(appWindow);

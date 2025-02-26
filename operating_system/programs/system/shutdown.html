@@ -1,4 +1,4 @@
-/*
+<!--
     BSD 2-Clause License
 
     Copyright (c) 2024, mpax235
@@ -23,68 +23,24 @@
     CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
     OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+-->
 
-body {
-    font-family: "Montserrat", sans-serif;
-    padding: 5px;
-}
-
-#header-cyan {
-    color: #00ffff;
-    font-size: 22px;
-}
-
-#logo {
-    color: #00ffff;
-    font-size: 22px;
-    text-align: right;
-    float: right; /* force the logo to the right */
-}
-
-.paragraph {
-    padding: 5px;
-}
-
-button {
-    background-color: #1616165e;
-    border: 1px solid rgba(0, 255, 255, 0.18);
-    padding: 10px 15px;
-    color: #00ffff;
-    font-family: 'Montserrat', 'Arial';
-    text-decoration: none;
-    text-align: center;
-    border-radius: 12px;
-    transition: 0.2s ease-in-out;
-    backdrop-filter: blur(7px);
-}
-
-button:hover {
-    background-color: #00ffff5e;
-    transform: scale(1.05);
-    color: #000000;
-}
-
-#button-right {
-    float: right;
-}
-
-#button-left-red {
-    background-color: #ff00005e;
-    border: 1px solid rgba(255, 0, 0, 0.18);
-    color: #ff0000;
-}
-
-#button-left-red:hover {
-    background-color: #ff0000;
-    border: 1px solid rgba(255, 0, 0, 0.18);
-    color: #000000;
-}
-
-.button-center {
-    text-align: center;
-}
-
-a:hover button {
-    cursor: pointer;
-}
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>mpax235 OS</title>
+        <link rel="stylesheet" href="shutdown.css">
+    </head>
+    <body>
+        <div id="cover">
+            <div id="stuff">
+                <span>Your system is now shutdown.</span><br>
+                <span>To restart, please press F9.</span>
+            </div>
+        </div>
+        <div class="container">
+            <span id="shutdown">Shutting down...</span>
+        </div>
+    </body>
+    <script src="shutdown.js"></script>
+</html>

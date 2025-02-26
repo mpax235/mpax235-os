@@ -29,14 +29,20 @@
 <html lang="en">
     <head>
         <title>mpax235 OS</title>
-        <link rel="stylesheet" href="../css/bios.css"> <!--includes the UEFI stylesheet-->
-        <link rel="stylesheet" href="../css/efi_app.css"> <!--includes the EFI app stylesheet-->
+        <link rel="stylesheet" href="../../uefi_firmware/css/bios.css"> <!--includes the UEFI stylesheet-->
+        <link rel="stylesheet" href="../../uefi_firmware/css/efiapp.css"> <!--includes the EFI app stylesheet-->
         <link rel="stylesheet" href="bootx64.css"> <!--includes the BOOTX64 EFI APP's stylesheet-->
     </head>
     <body>
         <div class="container"> <!--for the EFI app to work correctly-->
-            <div class="logo1">
-                <img id="logo2" src="../../uefi_firmware/sources/logos/uefi_logo.png">
+            <div id="logo1">
+                <span id="logo2">M</span>
+                <span>mpax235 OS 8</span>
+                <div id="loadingbarcontainer">
+                    <div id="loadingbar">
+                        <div id="progress"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

@@ -25,66 +25,41 @@
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-body {
-    font-family: "Montserrat", sans-serif;
-    padding: 5px;
+const mpaxos8 = document.getElementById('mpaxos8');
+const cover = document.getElementById('blackscreen');
+const body = document.body;
+const readyelement = document.getElementById('ready');
+
+body.style.opacity = '1';
+
+setTimeout(() => {
+    cover.style.opacity = '0';
+}, 100);
+
+setTimeout(() => {
+    cover.style.display = 'none';
+}, 1100);
+
+setTimeout(() => {
+    mpaxos8.style.textShadow = '0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4)';
+}, 2100);
+
+setTimeout(() => {
+    mpaxos8.style.animation = 'glow 3s ease-in-out infinite';
+}, 3100);
+
+function ready() {
+    body.style.opacity = 0;
+
+    setTimeout(() => {
+        window.location.href = 'ready.html';
+    }, 500);
 }
 
-#header-cyan {
-    color: #00ffff;
-    font-size: 22px;
-}
+setTimeout(() => {
+    readyelement.style.opacity = '1';       
+}, 100);
 
-#logo {
-    color: #00ffff;
-    font-size: 22px;
-    text-align: right;
-    float: right; /* force the logo to the right */
-}
-
-.paragraph {
-    padding: 5px;
-}
-
-button {
-    background-color: #1616165e;
-    border: 1px solid rgba(0, 255, 255, 0.18);
-    padding: 10px 15px;
-    color: #00ffff;
-    font-family: 'Montserrat', 'Arial';
-    text-decoration: none;
-    text-align: center;
-    border-radius: 12px;
-    transition: 0.2s ease-in-out;
-    backdrop-filter: blur(7px);
-}
-
-button:hover {
-    background-color: #00ffff5e;
-    transform: scale(1.05);
-    color: #000000;
-}
-
-#button-right {
-    float: right;
-}
-
-#button-left-red {
-    background-color: #ff00005e;
-    border: 1px solid rgba(255, 0, 0, 0.18);
-    color: #ff0000;
-}
-
-#button-left-red:hover {
-    background-color: #ff0000;
-    border: 1px solid rgba(255, 0, 0, 0.18);
-    color: #000000;
-}
-
-.button-center {
-    text-align: center;
-}
-
-a:hover button {
-    cursor: pointer;
-}
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});

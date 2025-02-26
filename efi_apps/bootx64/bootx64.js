@@ -25,21 +25,36 @@
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+const loadingbar = document.getElementById('loadingbar');
+
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
+
 function fadeInLogo() {
-    const logo = document.getElementById("logo2");
+    const logo = document.getElementById("logo1");
+    logo.style.transform = 'scale(100%)';
     logo.style.opacity = 1;
 
-    setTimeout(fadeOutLogo, 2000);
+    setTimeout(fadeOutLogo, 5000);
 }
 
+setTimeout(() => {
+    loadingbar.style.animation = 'loadingbar 2s ease-in-out';
+    setTimeout(() => {
+        loadingbar.style.width = '300px';
+    }, 1999);
+}, 3000);
+
 function fadeOutLogo() {
-    const logo = document.getElementById("logo2");
+    const logo = document.getElementById("logo1");
+    logo.style.transform = 'scale(500%)';
     logo.style.opacity = 0;
 }
 
 setTimeout(function() {
     window.location.href = "../../operating_system/programs/welcome_to_mpax235_os/index.html";
-}, 4000);
+}, 8000);
 
 window.onload = function() {
     fadeInLogo();
